@@ -1,0 +1,81 @@
+/* 1. Root Variables for Branding */
+:root {
+    /* BRAND COLOR PALETTE (Tech/Innovation Blue) */
+    --primary-color: #007AFF;   /* Electric Blue */
+    --secondary-color: #f0f0f0; /* Light Gray for button/background contrast */
+    --text-color: #111111;      /* Deep Charcoal */
+    --background-color: #FFFFFF; /* Crisp White */
+    
+    /* TYPOGRAPHY (Professional Google Fonts) */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+/* 2. Global Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    margin: 0; 
+    padding: 0;
+}
+
+/* Add padding to the main content area */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Limits width on huge screens */
+    margin: 0 auto; /* Center the main content */
+}
+
+/* 3. Heading Styles */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color); 
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+/* 4. Layout: Product Grid using Flexbox */
+.product-container {
+    display: flex; /* Enable Flexbox layout */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    gap: 20px; /* Space between the cards */
+    justify-content: space-between; /* Space out cards evenly */
+    margin-top: 30px;
+}
+
+.product-card {
+    flex: 1 1 calc(33.33% - 20px); /* Sets 3 cards per row with spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    min-width: 250px; /* Ensures cards are readable */
+    box-sizing: border-box; 
+    background-color: #FFFFFF;
+}
+
+.product-image {
+    height: 150px; 
+    background-color: var(--secondary-color); /* Light gray placeholder */
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* 5. Button Styling */
+.btn-buy {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
